@@ -1,0 +1,444 @@
+html, body {
+       height: 100%;
+       font-family: "roboto", sans-serif;
+       font-size: 16px;
+       color: rgb(0, 0, 0);
+       opacity: 1;
+}
+
+header {
+       position: fixed;
+       width: 100%;
+       background-color: rgb(250, 250, 250);
+       z-index: 10;
+}
+
+#containerHeader {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 6.25rem;
+       width: 100%;
+}
+
+#flexItemName {
+       flex-grow: 1;
+       flex-shrink: 5;
+       width: 20%;
+       margin-left: 1.5rem; 
+       font-size: 1rem;
+       letter-spacing: -0.03rem;
+}
+
+#flexItemNavMenu_desk {
+       display: flex;
+       flex-grow: 1;
+       flex-shrink: 1;
+       align-items: center;
+       justify-content: end;
+       max-width: 50%;
+       margin-right: 1.5rem;
+       font-size: 1rem;
+       letter-spacing: -0.03rem;
+}
+
+#flexItemNavMenu_desk li {
+       display: inline-block;
+       margin-left: 2rem; 
+       font-weight: 400;
+}
+
+#flexItemNavMenu_desk a {
+       padding: 0.2rem 0.5rem;
+       border-radius: 1rem;
+       transition-property: background-color;
+       transition-duration: 200ms;
+       transition-timing-function: ease-in-out;
+}
+
+#flexItemNavMenu_desk a:hover {
+       background-color: #33FFE0;
+}
+
+@media only screen and (max-width: 650px) {
+       #flexItemNavMenu_desk {
+              display: none;
+       }
+
+       #flexItemName{
+              margin-left: 0.5rem;
+       }
+
+       #flexItemNavMenu_mobile a {
+       padding: 0.2rem 0.5rem;
+       border-radius: 1rem;
+       transition-property: background-color;
+       transition-duration: 200ms;
+       transition-timing-function: ease-in-out;
+}
+
+       #flexItemNavMenu_mobile a:hover {
+              background-color:#33FFE0;
+       }
+}
+
+#flexItemNavMenu_mobile a {
+       font-size: 1.5rem;
+       margin-left: 1rem;
+}
+
+#flexItemNavMenu_mobile {
+       display: flex;
+}
+
+#flexItemNavMenu_mobile li {
+       display: inline-block;
+}
+
+@media only screen and (min-width: 650px) {
+       #flexItemNavMenu_mobile {
+              display: none;
+       } 
+}
+
+
+
+
+
+/* :::::::::::::::::::::::::MAIN:::::::::::::::::::::::::::::::: */
+
+#title {
+       box-sizing: border-box;
+       position: relative;
+       top: 7.25rem;
+       max-width: 70%;
+       margin: auto;
+       color: white;
+       padding: 0.5rem 1rem;
+       background-color: #FF3F3F;
+}
+
+#container_visualDesign {
+       position: relative;
+       top: 9.25rem;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       grid-gap: 15px 15px;
+       grid-template-areas: "gridTemplateImage01 gridTemplateImage02 gridTemplateImage03"
+                            "gridTemplateImage04 gridTemplateImage05 gridTemplateImage06"
+                            "gridTemplateImage07 gridTemplateImage08 gridTemplateImage09";
+
+       max-width: 70%;
+       margin: auto;
+       height: 91.5vh;
+}
+
+.titleOverlay {
+       font-size: 2.5rem;
+       color:white;
+       transition-property: color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+}
+
+.subTitleOverlay {
+       color: white;
+       font-weight: 400;
+       transition-property: color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+}
+
+/*::::::::::::img01:::::::::::*/
+
+#gridTemplateImage01 {
+       grid-area:  gridTemplateImage01;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+
+}
+
+ #gridTemplateImage01 img {
+       display: block;
+       max-width: 100%;
+}
+
+#gridTemplateImage01Overlay {
+       grid-area:  gridTemplateImage01;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage01Overlay:hover {
+       background-color: #33FFE0;
+}
+
+#gridTemplateImage01Overlay:hover .titleOverlay, #gridTemplateImage01Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+ /* #gridTemplateImage01:hover img {
+       transform: scale(1.4);
+       transform-origin: 50% 50%;
+     } */
+
+
+/*::::::::::::img02:::::::::::*/
+
+#gridTemplateImage02 {
+       grid-area:  gridTemplateImage02;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+}
+
+#gridTemplateImage02 img {
+       display: block;
+       max-width: 100%;
+       transform: scale(1.3);
+       transform-origin: 50% 0%;
+}
+
+#gridTemplateImage02Overlay {
+       grid-area:  gridTemplateImage02;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage02Overlay:hover {
+       background-color: #33FFE0;
+     }
+
+#gridTemplateImage02Overlay:hover .titleOverlay, #gridTemplateImage02Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+
+/*::::::::::::img03:::::::::::*/
+
+#gridTemplateImage03 {
+       grid-area:  gridTemplateImage03;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+}
+
+#gridTemplateImage03 img {
+       display: block;
+       max-width: 100%;
+}
+
+#gridTemplateImage03Overlay {
+       grid-area:  gridTemplateImage03;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage03Overlay:hover {
+       background-color: #33FFE0;
+}
+
+#gridTemplateImage03Overlay:hover .titleOverlay, #gridTemplateImage03Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+
+
+/*::::::::::::img04:::::::::::*/
+
+#gridTemplateImage04 {
+       grid-area:  gridTemplateImage04;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+}
+
+#gridTemplateImage04 img {
+       display: block;
+       max-width: 100%;
+       transform: scale(1.3);
+       transform-origin: 50% 2%;
+       position: relative;
+       /* top: 11%; */
+}
+
+#gridTemplateImage04Overlay {
+       grid-area:  gridTemplateImage04;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage04Overlay:hover {
+       background-color: #33FFE0;
+}
+
+#gridTemplateImage04Overlay:hover .titleOverlay, #gridTemplateImage04Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+
+
+/*::::::::::::img05:::::::::::*/
+
+#gridTemplateImage05 {
+       grid-area:  gridTemplateImage05;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+}
+
+#gridTemplateImage05 img {
+       display: block;
+       max-width: 100%;
+       transform: scale(1.3);
+       transform-origin: 50% 2%;
+       position: relative;
+}
+
+#gridTemplateImage05Overlay {
+       grid-area:  gridTemplateImage05;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage05Overlay:hover {
+       background-color: #33FFE0;
+}
+
+#gridTemplateImage05Overlay:hover .titleOverlay, #gridTemplateImage05Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+
+
+
+
+/*::::::::::::img06:::::::::::*/
+
+#gridTemplateImage06 {
+       grid-area:  gridTemplateImage06;
+       overflow: hidden;
+       background-color: rgb(133, 133, 133);
+       border-radius: 0.5rem;
+       z-index: 0;
+}
+
+#gridTemplateImage06 img {
+       display: block;
+       max-width: 100%;
+       transform: scale(1.3);
+       transform-origin: 50% 2%;
+       position: relative;
+ }
+
+#gridTemplateImage06Overlay {
+       grid-area:  gridTemplateImage06;
+       justify-content: center;
+       align-items: center;
+
+       transition-property: background-color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+       display:flex;
+       text-align: center;
+       background-color: rgb(255, 63, 63);
+       /* opacity: 0.95; */
+       border-radius: 0.5rem;
+       z-index: 1;
+}
+
+#gridTemplateImage06Overlay:hover {
+       background-color: #33FFE0;
+}
+
+#gridTemplateImage06Overlay:hover .titleOverlay, #gridTemplateImage06Overlay:hover .subTitleOverlay {
+       color: black;
+}
+
+
+
+
+
+/*::::::::::::::::::::::::::::::::FOOTER::::::::::::::::::::::::::::::::::::::::*/
+
+
+.copyright {
+       width: 100%;
+       text-align: center;
+       padding: 0.8rem 0;
+       /* height: 100vh;  */
+       height: 50px;
+       font-size: .7rem;
+       background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
