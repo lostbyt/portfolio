@@ -110,7 +110,7 @@ header {
 
 #buttonClose {
        left: 86%;
-       top: 40.5rem;
+       top: 10rem;
        width: 50px;
        height: 50px;
        position: fixed;
@@ -123,7 +123,7 @@ header {
 
 #buttonCloseHover {
        left: 86%;
-       top: 40.5rem;
+       top: 10rem;
        width: 50px;
        height: 50px;
        position: fixed;
