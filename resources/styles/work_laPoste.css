@@ -148,14 +148,10 @@ header {
 .containerVideo {
        display: flex;
        flex-wrap: wrap;
-
        position: relative;
        top: 7.25rem;
        width: 70%;
        margin: auto;
-
-       /* border: 5px solid rgb(255, 0, 128); */
-
 }
 
 .comments {
@@ -164,14 +160,11 @@ header {
        margin-bottom: 2rem;
        justify-content: space-between;
        border-radius: 0.5rem;
-       /* border: 5px solid blue; */
 }
 
 .typeOfWork {
        box-sizing: border-box;
        max-width: 40%;
-
-       font-family: 'Roboto Condensed';
        letter-spacing: 0.1px;
        text-transform: uppercase;
        font-size: 2rem;
@@ -183,8 +176,6 @@ header {
        padding: 1rem 2rem;
        color: white;
        background-color: #363636;
-       /* border: 5px solid rgb(0, 183, 255); */
-
 }
 
 .workExplanation {
@@ -193,7 +184,6 @@ header {
        font-size: 1.2rem;
        margin: 2rem 0;
        text-align: justify;
-       /* border: 1px solid black; */
 }
 
 #buttonVimeo {
@@ -228,7 +218,6 @@ header {
 .vignette {
        display: flex;
        width: 100%;
-       /* border: 1px solid white; */
 }
 
 .movie {
