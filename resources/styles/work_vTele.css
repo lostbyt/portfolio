@@ -1,47 +1,35 @@
 html, body {
        height: 100%;
-       font-family: 'Montserrat','Roboto Condensed', sans-serif;
+       font-family: "roboto", sans-serif;
        font-size: 16px;
        color: rgb(0, 0, 0);
        opacity: 1;
+       background-image: url(../images/other/index_hash_v01.jpg);
 }
 
 header {
        position: fixed;
        width: 100%;
-       background-color: rgb(250, 250, 250);
-       z-index: 1;
-       /* border-bottom: 1px solid rgb(0, 0, 0); */
+       background-color: #23D0E8;
+       z-index: 10;
 }
 
 #containerHeader {
        display: flex;
        justify-content: space-between;
        align-items: center;
-
        height: 6.25rem;
        width: 100%;
-       
 }
 
 #flexItemName {
+       color: white;
        flex-grow: 1;
        flex-shrink: 5;
- 
        width: 20%;
        margin-left: 1.5rem; 
-}
-
-#flexItemName a {
        font-size: 1rem;
        letter-spacing: -0.03rem;
-       transition-property: background-color;
-       transition-duration: 200ms;
-       transition-timing-function: ease-in-out;
-}
-
-#flexItemName a:hover {
-       background-color: #33FFE0;
 }
 
 #flexItemNavMenu_desk {
@@ -50,7 +38,6 @@ header {
        flex-shrink: 1;
        align-items: center;
        justify-content: end;
-
        max-width: 50%;
        margin-right: 1.5rem;
        font-size: 1rem;
@@ -60,18 +47,21 @@ header {
 #flexItemNavMenu_desk li {
        display: inline-block;
        margin-left: 2rem; 
-
        font-weight: 400;
 }
 
 #flexItemNavMenu_desk a {
-       transition-property: background-color;
+       color: white;
+       padding: 0.2rem 0.5rem;
+       border-radius: 1rem;
+       transition-property: background-color, colors;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
 #flexItemNavMenu_desk a:hover {
        background-color: #33FFE0;
+       color: black;
 }
 
 @media only screen and (max-width: 650px) {
@@ -79,31 +69,27 @@ header {
               display: none;
        }
 
-       #flexItemlogo{
+       #flexItemName{
               margin-left: 0.5rem;
        }
 
-       #flexItemlogo img{
-              width: 30%;
-       }
-
        #flexItemNavMenu_mobile a {
+       padding: 0.2rem 0.5rem;
+       border-radius: 1rem;
        transition-property: background-color, color;
-       transition-duration: 500ms;
+       transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
        #flexItemNavMenu_mobile a:hover {
-              color: white;
-              background-color: rgb(255, 63, 63);
+              background-color:#33FFE0;
+              color: black;
        }
 }
 
 #flexItemNavMenu_mobile a {
        font-size: 1.5rem;
        margin-left: 1rem;
-
-       /* border: 1px solid red; */
 }
 
 #flexItemNavMenu_mobile {
@@ -130,7 +116,7 @@ header {
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 10rem;
+       top: 10.7rem;
        background-image: url(../images/other/closeButton.png);
        background-size: cover;
        z-index: 1;
@@ -142,7 +128,7 @@ header {
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 10rem;
+       top: 10.7rem;
        margin-right: 2rem;
        background-image: url(../images/other/closeButtonHover.png);
        background-size: cover;
@@ -161,56 +147,107 @@ header {
 
 .containerVideo {
        display: flex;
-       flex-direction: column;
-       align-items: center;
+       flex-wrap: wrap;
 
        position: relative;
        top: 7.25rem;
-       max-width: 100%;
+       width: 70%;
+       margin: auto;
 
        /* border: 5px solid rgb(255, 0, 128); */
 
 }
 
-.movie {
-       width: 75%;
+#vimeoVideo {
+       width:100%;
        height: auto;
-       /* border:5px solid blue; */
+}
+
+#vimeoVideo iframe {
+       width: 50%;
 }
 
 .comments {
        display: flex;
-       width: 75%;
-       margin-top: 2rem;
-       /* border: 5px solid blue; */
+       width: 100%;
+       margin-bottom: 2rem;
+       justify-content: space-between;
+       border-radius: 0.5rem;
 }
 
 .typeOfWork {
        box-sizing: border-box;
-       width: 40%;
+       max-width: 40%;
 
        font-family: 'Roboto Condensed';
        letter-spacing: 0.1px;
        text-transform: uppercase;
-       font-size: 2.5rem;
+       font-size: 2rem;
        line-height: 2rem;
-       font-weight: 400;
+       font-weight: 700;
        text-align: left;
        align-self: center;
-
+       margin: 0 2rem 0 0;
+       padding: 1rem 2rem;
+       color: white;
+       background-color: #363636;
        /* border: 5px solid rgb(0, 183, 255); */
 
 }
 
 .workExplanation {
-       width: 60%;
-       font-family: 'Montserrat';
+       width: 50%;
        line-height: 1.5rem;
        font-size: 1.2rem;
-
-       /* border: 5px solid rgb(255, 174, 0); */
+       margin: 2rem 0;
+       text-align: justify;
+       /* border: 1px solid black; */
 }
 
+#buttonVimeo {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 10%;
+       height: 50px;
+
+       align-self: center;
+       justify-self: flex-end;
+       margin: 2rem 0 2rem 2rem;
+       border-radius: 2rem;
+       background-color: #23D0E8;
+       color: white;
+       font-weight: 400;
+       transition-property: background-color, color;
+       transition-duration: 350ms;
+       transition-timing-function: ease-in-out;
+
+}
+
+#buttonVimeo:hover {
+       background-color: #33FFE0;
+       color: black;
+}
+
+.presentation img {
+       width: 100%;
+}
+
+.vignette {
+       display: flex;
+       width: 100%;
+}
+
+.movie {
+       width: 50%;
+       height: auto;
+       border:1px solid rgb(0, 0, 0);
+}
+
+.vignette img {
+       max-width: 50%;
+       border: 1px solid white;
+}
 
 
 
@@ -222,13 +259,13 @@ header {
 
 .copyright {
        position: relative;
-       top: 7.25rem;
+       top: 17.25rem;
        width: 100%;
        text-align: center;
        padding: 7rem 0;
-       height: calc(100vh - (calc(100vh - 1.375rem))); 
+       height: 200px; 
        font-size: .7rem;
-       background-color: rgb(255, 255, 255);
+       background-color: rgb(231, 231, 231);
 }
 
 

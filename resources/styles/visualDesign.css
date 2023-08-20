@@ -4,12 +4,16 @@ html, body {
        font-size: 16px;
        color: rgb(0, 0, 0);
        opacity: 1;
+       background-image: url(../images/other/index_hash_v01.jpg);
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: top;
 }
 
 header {
        position: fixed;
        width: 100%;
-       background-color: rgb(250, 250, 250);
+       background-color: #23D0E8;
        z-index: 10;
 }
 
@@ -22,6 +26,7 @@ header {
 }
 
 #flexItemName {
+       color: white;
        flex-grow: 1;
        flex-shrink: 5;
        width: 20%;
@@ -51,13 +56,15 @@ header {
 #flexItemNavMenu_desk a {
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       color: white;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
 #flexItemNavMenu_desk a:hover {
        background-color: #33FFE0;
+       color: black;
 }
 
 @media only screen and (max-width: 650px) {
@@ -72,13 +79,14 @@ header {
        #flexItemNavMenu_mobile a {
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
        #flexItemNavMenu_mobile a:hover {
               background-color:#33FFE0;
+              color: black;
        }
 }
 
@@ -105,17 +113,17 @@ header {
 
 
 
-/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::VISUAL DESIGN::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::MAIN:::::::::::::::::::::::::::::::: */
 
 #title {
        box-sizing: border-box;
        position: relative;
        top: 7.25rem;
-       width: 70%;
+       max-width: 70%;
        margin: auto;
        color: white;
        padding: 0.5rem 1rem;
-       background-color: #FF3F3F;
+       background-color: #363636;
 }
 
 #container_visualDesign {
@@ -129,7 +137,7 @@ header {
                             "gridTemplateImage04 gridTemplateImage05 gridTemplateImage06"
                             "gridTemplateImage07 gridTemplateImage08 gridTemplateImage09";
 
-       width: 70%;
+       max-width: 70%;
        margin: auto;
        height: 91.5vh;
 }
@@ -152,10 +160,10 @@ header {
 
 /*::::::::::::img01:::::::::::*/
 
-
 #gridTemplateImage01 {
        grid-area:  gridTemplateImage01;
        overflow: hidden;
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
 
@@ -167,10 +175,7 @@ header {
 }
 
 #gridTemplateImage01Overlay {
-       grid-column-start: 1;
-       grid-column-end: 2;
-       grid-row-start: 1;
-       grid-row-end: 2;
+       grid-area:  gridTemplateImage01;
        justify-content: center;
        align-items: center;
 
@@ -180,7 +185,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -194,6 +199,10 @@ header {
        color: black;
 }
 
+ /* #gridTemplateImage01:hover img {
+       transform: scale(1.4);
+       transform-origin: 50% 50%;
+     } */
 
 
 /*::::::::::::img02:::::::::::*/
@@ -201,6 +210,7 @@ header {
 #gridTemplateImage02 {
        grid-area:  gridTemplateImage02;
        overflow: hidden;
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
 }
@@ -213,10 +223,7 @@ header {
 }
 
 #gridTemplateImage02Overlay {
-       grid-column-start: 2;
-       grid-column-end: 3;
-       grid-row-start: 1;
-       grid-row-end: 2;
+       grid-area:  gridTemplateImage02;
        justify-content: center;
        align-items: center;
 
@@ -226,7 +233,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -234,17 +241,19 @@ header {
 
 #gridTemplateImage02Overlay:hover {
        background-color: #33FFE0;
-}
+     }
 
 #gridTemplateImage02Overlay:hover .titleOverlay, #gridTemplateImage02Overlay:hover .subTitleOverlay {
        color: black;
 }
+
 
 /*::::::::::::img03:::::::::::*/
 
 #gridTemplateImage03 {
        grid-area:  gridTemplateImage03;
        overflow: hidden;
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
 }
@@ -255,10 +264,7 @@ header {
 }
 
 #gridTemplateImage03Overlay {
-       grid-column-start: 3;
-       grid-column-end: 4;
-       grid-row-start: 1;
-       grid-row-end: 2;
+       grid-area:  gridTemplateImage03;
        justify-content: center;
        align-items: center;
 
@@ -268,7 +274,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -283,15 +289,16 @@ header {
 }
 
 
+
 /*::::::::::::img04:::::::::::*/
 
- #gridTemplateImage04 {
+#gridTemplateImage04 {
        grid-area:  gridTemplateImage04;
        overflow: hidden;
-       background-color: rgb(10, 133, 204);
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
- }
+}
 
 #gridTemplateImage04 img {
        display: block;
@@ -299,13 +306,11 @@ header {
        transform: scale(1.3);
        transform-origin: 50% 2%;
        position: relative;
+       /* top: 11%; */
 }
 
 #gridTemplateImage04Overlay {
-       grid-column-start: 1;
-       grid-column-end: 2;
-       grid-row-start: 2;
-       grid-row-end: 3;
+       grid-area:  gridTemplateImage04;
        justify-content: center;
        align-items: center;
 
@@ -315,7 +320,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -331,13 +336,12 @@ header {
 
 
 
-
 /*::::::::::::img05:::::::::::*/
 
 #gridTemplateImage05 {
        grid-area:  gridTemplateImage05;
        overflow: hidden;
-       background-color: rgb(10, 204, 123);
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
 }
@@ -351,20 +355,17 @@ header {
 }
 
 #gridTemplateImage05Overlay {
-       grid-column-start: 2;
-       grid-column-end: 3;
-       grid-row-start: 2;
-       grid-row-end: 3;
+       grid-area:  gridTemplateImage05;
        justify-content: center;
        align-items: center;
 
-       transition-property: opacity;
-       transition-duration: 500ms;
+       transition-property: background-color;
+       transition-duration: 350ms;
        transition-timing-function: ease-in-out;
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -381,12 +382,13 @@ header {
 
 
 
+
 /*::::::::::::img06:::::::::::*/
 
 #gridTemplateImage06 {
        grid-area:  gridTemplateImage06;
        overflow: hidden;
-       background-color: rgb(204, 191, 10);
+       background-color: rgb(133, 133, 133);
        border-radius: 0.5rem;
        z-index: 0;
 }
@@ -397,18 +399,15 @@ header {
        transform: scale(1.3);
        transform-origin: 50% 2%;
        position: relative;
-}
+ }
 
 #gridTemplateImage06Overlay {
-       grid-column-start: 3;
-       grid-column-end: 4;
-       grid-row-start: 2;
-       grid-row-end: 3;
+       grid-area:  gridTemplateImage06;
        justify-content: center;
        align-items: center;
 
-       transition-property: opacity;
-       transition-duration: 500ms;
+       transition-property: background-color;
+       transition-duration: 350ms;
        transition-timing-function: ease-in-out;
 
        display:flex;
@@ -435,15 +434,16 @@ header {
 
 
 .copyright {
-       position: relative;
-       top: 0rem;
        width: 100%;
        text-align: center;
        padding: 0.8rem 0;
-       height: 50px;
+       /* height: 100vh;  */
+       height: 200px;
        font-size: .7rem;
-       background-color: #ffffff;
+       background-color: rgb(231, 231, 231);
 }
+
+
 
 
 

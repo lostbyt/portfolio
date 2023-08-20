@@ -4,12 +4,13 @@ html, body {
        font-size: 16px;
        color: rgb(0, 0, 0);
        opacity: 1;
+       background-image: url(../images/other/index_hash_v01.jpg);
 }
 
 header {
        position: fixed;
        width: 100%;
-       background-color: rgb(250, 250, 250);
+       background-color: #23D0E8;
        z-index: 10;
 }
 
@@ -22,6 +23,7 @@ header {
 }
 
 #flexItemName {
+       color: white;
        flex-grow: 1;
        flex-shrink: 5;
        width: 20%;
@@ -49,15 +51,17 @@ header {
 }
 
 #flexItemNavMenu_desk a {
+       color: white;
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
 #flexItemNavMenu_desk a:hover {
        background-color: #33FFE0;
+       color: black;
 }
 
 @media only screen and (max-width: 650px) {
@@ -72,13 +76,14 @@ header {
        #flexItemNavMenu_mobile a {
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
        #flexItemNavMenu_mobile a:hover {
               background-color:#33FFE0;
+              color: black;
        }
 }
 
@@ -101,7 +106,6 @@ header {
        } 
 }
 
-
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
@@ -111,7 +115,7 @@ header {
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 15rem;
+       top: 10rem;
        background-image: url(../images/other/closeButton.png);
        background-size: cover;
        z-index: 1;
@@ -123,7 +127,7 @@ header {
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 15rem;
+       top: 10rem;
        margin-right: 2rem;
        background-image: url(../images/other/closeButtonHover.png);
        background-size: cover;
@@ -171,7 +175,7 @@ header {
        font-family: 'Roboto Condensed';
        letter-spacing: 0.1px;
        text-transform: uppercase;
-       font-size: 1.8rem;
+       font-size: 2rem;
        line-height: 2rem;
        font-weight: 700;
        text-align: left;
@@ -179,7 +183,7 @@ header {
        margin: 0 2rem 0 0;
        padding: 1rem 2rem;
        color: white;
-       background-color: rgb(255, 63, 63);
+       background-color: #363636;
        /* border: 5px solid rgb(0, 183, 255); */
 
 }
@@ -204,7 +208,7 @@ header {
        justify-self: flex-end;
        margin: 2rem 0 2rem 2rem;
        border-radius: 2rem;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        color: white;
        font-weight: 400;
        transition-property: background-color, color;
@@ -230,7 +234,6 @@ header {
 
 .vignette img {
        max-width: 50%;
-
        border: 1px solid white;
 }
 
@@ -245,13 +248,13 @@ header {
 
 .copyright {
        position: relative;
-       top: 7.25rem;
+       top: 17.25rem;
        width: 100%;
        text-align: center;
        padding: 7rem 0;
-       height: calc(100vh - (calc(100vh - 1.375rem))); 
+       height: 200px; 
        font-size: .7rem;
-       background-color: rgb(255, 255, 255);
+       background-color: rgb(231, 231, 231);
 }
 
 

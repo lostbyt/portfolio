@@ -4,12 +4,13 @@ html, body {
        font-size: 16px;
        color: rgb(0, 0, 0);
        opacity: 1;
+       background-image: url(../images/other/index_hash_v01.jpg);
 }
 
 header {
        position: fixed;
        width: 100%;
-       background-color: rgb(250, 250, 250);
+       background-color: #23D0E8;
        z-index: 10;
 }
 
@@ -22,6 +23,7 @@ header {
 }
 
 #flexItemName {
+       color: white;
        flex-grow: 1;
        flex-shrink: 5;
        width: 20%;
@@ -49,15 +51,17 @@ header {
 }
 
 #flexItemNavMenu_desk a {
+       color: white;
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
 #flexItemNavMenu_desk a:hover {
        background-color: #33FFE0;
+       color: black;
 }
 
 @media only screen and (max-width: 650px) {
@@ -70,15 +74,17 @@ header {
        }
 
        #flexItemNavMenu_mobile a {
+       color: white;
        padding: 0.2rem 0.5rem;
        border-radius: 1rem;
-       transition-property: background-color;
+       transition-property: background-color, color;
        transition-duration: 200ms;
        transition-timing-function: ease-in-out;
 }
 
        #flexItemNavMenu_mobile a:hover {
               background-color:#33FFE0;
+              color: black;
        }
 }
 
@@ -102,16 +108,19 @@ header {
 }
 
 
+
+
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
 
 #buttonClose {
-       left: 90%;
+       left: 86%;
+       top: 25.7rem;
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 16rem;
+
        background-image: url(../images/other/closeButton.png);
        background-size: cover;
        z-index: 1;
@@ -119,11 +128,12 @@ header {
 }
 
 #buttonCloseHover {
-       left: 90%;
+       left: 86%;
+       top: 25.7rem;
        width: 50px;
        height: 50px;
        position: fixed;
-       top: 16rem;
+       
        margin-right: 2rem;
        background-image: url(../images/other/closeButtonHover.png);
        background-size: cover;
@@ -154,9 +164,13 @@ header {
 
 }
 
+.boldItalic {
+       font-weight: 700;
+}
+
 .comments {
        display: flex;
-       justify-content:space-between;
+       justify-content: space-between;
        width: 100%;
        margin-bottom: 2rem;
        /* background-color: rgb(255, 63, 63); */
@@ -179,8 +193,7 @@ header {
        margin: 0 2rem 0 0;
        padding: 1rem 2rem;
        color: white;
-       background-color: rgb(255, 63, 63);
-       /* border: 5px solid rgb(0, 183, 255); */
+       background-color: #363636;
 
 }
 
@@ -204,7 +217,7 @@ header {
        justify-self: flex-end;
        margin: 2rem 0 2rem 2rem;
        border-radius: 2rem;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        color: white;
        font-weight: 400;
        transition-property: background-color, color;
@@ -225,11 +238,13 @@ header {
 .vignette {
        display: flex;
        width: 100%;
+       
        /* border: 1px solid white; */
 }
 
 .vignette img {
        max-width: 50%;
+       height: auto;
        border: 1px solid white;
 }
 
@@ -250,7 +265,7 @@ header {
        padding: 7rem 0;
        height: calc(100vh - (calc(100vh - 1.375rem))); 
        font-size: .7rem;
-       background-color: rgb(255, 255, 255);
+       background-color: rgb(231, 231, 231);
 }
 
 
