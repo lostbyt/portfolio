@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Digital transformation</title>
+      <link href="./resources/styles/reset.css" rel="stylesheet">
+      <link href="./resources/styles/work_digitalTransfo.css" rel="stylesheet">
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+   </head>
+   <header>
+      <div id="containerHeader">
+            <div id="flexItemName">
+               <p>emmanuel moulun</p>
+            </div>
+            <nav id="flexItemNavMenu_desk">
+               <ul>
+                  <li><a href="./about.html">about/contact</a></li>
+                  <li><a href="./development.html">development</a></li>
+               </ul>
+            </nav>
+            <nav id="flexItemNavMenu_mobile">
+               <ul>
+                  <li><a href="./about.html">About/Contact</a></li>
+                  <li><a href="./development.html">development</a></li>
+               </ul>
+            </nav>
+      </div>
+   </header>
+   <body>
+      <div id="buttonClose"></div>
+            <a href="./development.html" alt="">
+               <div id="buttonCloseHover"></div>
+            </a>
+      </div>
+
+
+      <article class="containerVideo">
+         <div class="comments">
+            <p class="typeOfWork">Embedded programation</p> 
+            <p class="workExplanation">
+               Today, in a context of rising raw material costs and production expenses,
+               a manufacturing company must optimize its production processes in order to remain competitive in the market.</br>
+               The losses incurred by halting a production line or by suboptimal utilization of tools and resources can result
+               in severe economic setbacks. Furthermore, the decarbonization of industrial processes is becoming and will be
+               a significant challenge in the years to come. Therefore, it is crucial to use energy resources in the smartest possible manner.</br>
+               In recent years in Quebec, 46% of companies have begun integrating digital technologies into their manufacturing processes.
+               Industrial players are increasingly moving towards transforming automated factories into intelligent Industry 4.0 facilities.
+               A new industrial era has commenced, bringing with it a host of challenges to tackle.</br></br> The Internet of Things, with its capacity
+               to connect and synchronize various systems, can assist in addressing these challenges. Digital transformation brings about
+               heightened responsiveness, real-time performance monitoring and analysis, assessment of gains/losses, and risk anticipation.
+            </p>
+            <a href="https://www.figma.com/proto/Txu9iry1ZA43wBMgWIlnur/Tasty-world-prototype?type=design&node-id=1-2&t=gmiqnszZneD3v8vT-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design" alt="" id="buttonGit">
+               <p>Github</p>
+            </a>
+         </div>
+         
+         <div class="presentation">
+            <figure>
+               <img src="./resources/images/digital_transformation/diagram.jpg">
+            </figure>
+         </div>
+
+         <div class="comments vertical">
+            <p class="subtitle">Goals</p>
+            <p class="workExplanationFullLength">
+               The achievement of the smart factory relies on real-time communication to monitor and act upon the company's activities.
+               Systems communicate and cooperate with each other, as well as with humans, products, and machines. Hence, the Internet of Things (IoT)
+               connects all the "objects" within the factory – employees, machines, products, customers, suppliers, systems, and so on.</br>
+               As part of this synthesis project, the mission is to develop a proof of concept that demonstrates the implementation of data collection,
+               their transmission to a platform and a database, as well as real-time monitoring functionalities with a feedback loop.
+               I have chosen the electric motor as my subject, as it is widely employed in manufacturing companies and constitutes a pivotal
+               component of a conveyor, thus being crucial to monitor.
+            </p>
+         </div>
+
+         <div id="code">
+            <pre>
+               <code>
+                  <span class="type">void</span> <span class="object">loop</span><span class="variable">() {</span>
+
+                     <span class="condition">while</span><span class="variable">(!</span><span class="object">client.connected</span><span class="variable">()){</span>
+                        <span class="object">reconnect</span><span class="variable">();
+                     }</span>
+               
+                     <span class="type">time_t</span>  <span class="variable">now =</span> <span class="object">time</span> <span class="variable">(</span><span class="userInput">NULL</span><span class="variable">);</span>
+                     <span class="type">struct</span>  <span class="userInput">tm</span>  <span class="object">timeinfo</span><span class="variable">;</span>
+                     
+                     <span class="condition">if</span><span class="variable">(!</span> <span class="object">getLocalTime</span><span class="variable">(&timeinfo)){</span>
+                        <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">"Failed to obtain time"</span><span class="variable">);</span>
+                        <span class="condition">return</span><span class="variable">;
+                     }</span>
+
+                     <span class="condition">for</span> <span class="variable">(</span><span class="type">int</span> <span class="variable">j=</span> <span class="userInput">0</span>; <span class="variable">j&lt;sampleSize; j++)
+                     { </span>
+                        <span class="type">long</span>  <span class="variable">reading_x =</span> <span class="userInput">0</span><span class="variable">;</span>
+                        <span class="condition">for</span>  <span class="variable">(</span> <span class="type">int</span> <span class="variable">i =</span> <span class="userInput">0</span><span class="variable">; i &lt; interpolation; i++)
+                     {
+                     reading_x +=</span> <span class="object">analogRead</span><span class="variable">(xpin);
+                     }</span>
+                     <span class="type">int</span> <span class="variable">X= (reading_x/interpolation);</span>
+               
+                     <span class="condition">if</span> <span class="variable">(X > maximumX){
+                        maximumX = X;
+                     }</span>
+                     <span class="condition">if</span>  <span class="variable">(X &lt; minimumX){
+                        minimumX = X;
+                     }
+                                       
+                     }
+                        amplitude = maximumX - minimumX;</span>
+               </code>
+            </pre>
+         </div>
+
+         <div class="comments vertical">
+            <p class="subtitle">Data analysis</p>
+            <p class="workExplanationFullLength">
+            To simplify the analysis of data from the accelerometer sensor, rather than delving into complex frequency calculations
+            (Fourier Transform), we have chosen to measure amplitude:</br>
+            When our motor is operating under nominal conditions, the sensor provides two values, one representing the maximum
+            and the other the minimum. The difference between these two values reflects the amplitude, serving as a reference point
+            for determining whether the detected vibrations are abnormal. To simulate the introduction of vibrations into our motor,
+            we vary its supply voltage. The following captures depict the evolution of the amplitude (yellow curve)
+            in relation to the supply voltage.
+            </p>
+         </div>
+
+         <div class="presentation">
+            <figure>
+            <img src="./resources/images/digital_transformation/result_amplitude.jpg">
+            <figcaption class="captation">plot of the vibrations amplitude of the motor </figcaption>
+         </figure>
+         </div>
+
+         <div class="comments vertical">
+            <p class="subtitle">Transmission MQTT with TLS security</p>
+            <p class="workExplanationFullLength">
+               The MQTT protocol is chosen for the solution because it is simple, open, and easy to implement.
+               Additionally, this protocol is ideal for the type of messages typically transmitted in IoT, namely
+               lightweight messages with low bandwidth. In order to send the data collected by the sensors,
+               I first need to develop code to connect to the MQTT broker from our ESP device and format the data in JSON format.</br>
+               An MQTT connection is good. A secured TLS MQTT connection is better!</br>
+               The certificates are self-signed, and the public and private keys are generated by us and incorporated into the ESP32 code as follows:
+            </p>
+         </div>
+
+         <div id="code">
+            <pre>
+               <code>
+                     <span class="library">#include</span><span class="userInput"> &lt;ArduinoJson.h&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;ArduinoJson.hpp&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;WiFiClientSecure.h&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;PubSubClient.h&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;OneWire.h&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;DallasTemperature.h&gt;</span>
+                     <span class="library">#include</span><span class="userInput"> &lt;time.h&gt;</span> 
+                     
+                     <span class="type">const char*</span> <span class="variable">ssid =</span> <span class="userInput">""</span><span class="variable">;</span>
+                     <span class="type">const char*</span> <span class="variable">password =</span>  <span class="userInput">""</span><span class="variable">;</span>
+                     <span class="type">const char*</span> <span class="variable">mqqtServer =</span>  <span class="userInput">""</span><span class="variable">;</span>
+                     
+                     <span class="type">long</span> <span class="variable">lastmsg =</span>  <span class="userInput">0</span><span class="variable">;</span>
+                     <span class="type">const int</span> <span class="variable">timeBetween =</span>  <span class="userInput">5000</span><span class="variable">;</span>
+                     
+                     <span class="type">const int</span> <span class="variable">oneWireBus =</span>  <span class="userInput">19</span><span class="variable">;</span>     
+                     <span class="type">const int</span> <span class="variable">motor_number =</span>  <span class="userInput">1</span><span class="variable">;</span>
+                     
+                     <span class="type">const char*</span> <span class="variable">ntpServer =</span>  <span class="userInput">"pool.ntp.org"</span><span class="variable">;</span>
+                     <span class="type">const long</span> <span class="variable">gmtOffset_sec =</span>  <span class="userInput">-18000</span><span class="variable">;</span>
+                     <span class="type">const int</span> <span class="variable">daylightOffset_sec =</span>  <span class="userInput">3600</span><span class="variable">;</span>
+                     
+                     <span class="type">const byte</span> <span class="variable">xpin =</span>  <span class="userInput">34</span><span class="variable">;</span>
+                     <span class="type">int</span> <span class="variable">amplitude=</span>  <span class="userInput">0</span><span class="variable">;</span>
+                     <span class="type">const int</span> <span class="variable">interpolation =</span>  <span class="userInput">10</span><span class="variable">;</span>
+                     <span class="type">const int</span> <span class="variable">sampleSize =</span>  <span class="userInput">50</span><span class="variable">;</span>
+                  
+                     <span class="type">const char*</span> <span class="userInput"><span class="variable">CA_cert =</span> \
+                     "-----BEGIN CERTIFICATE-----\n" \
+                     "MIID6TCCAtGgAwIBAgIUIgyzKUBudZlLm0ZYdkwxAg59pOUwDQYJKoZIhvcNAQEL\n" \
+                     "BQAwgYMxCzAJBgNVBAYTAkNBMQ8wDQYDVQQIDAZRdWViZWMxETAPBgNVBAcMCE1v\n" \
+                     "bnRyZWFsMREwDwYDVQQKDAhDQW1hc3RlcjENMAsGA1UECwwEVEVTVDEQMA4GA1UE\n" \
+                     "AwwHU2VydmV1cjEcMBoGCSqGSIb3DQEJARYNY2FAbWFzdGVyLmNvbTAeFw0yMzAy\n" \
+                     "MDIyMzQ1MDBaFw0yODAyMDIyMzQ1MDBaMIGDMQswCQYDVQQGEwJDQTEPMA0GA1UE\n" \
+                     "CAwGUXVlYmVjMREwDwYDVQQHDAhNb250cmVhbDERMA8GA1UECgwIQ0FtYXN0ZXIx\n" \
+                     "DTALBgNVBAsMBFRFU1QxEDAOBgNVBAMMB1NlcnZldXIxHDAaBgkqhkiG9w0BCQEW\n" \
+                     "DWNhQG1hc3Rlci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDN\n" \
+                     "6VQbKIwrg3gTfFj8SfWA7yTw15Xlxd3wyxHm7AlKe5I9Suw+n3XBeX5hITU4DGNV\n" \
+                     "8xfA7+wv67iasMaq7r0G8wybcmXKBq+2m4cuI+fCk4AboWlCfsgj8oJ3vBu+Y2Ba\n" \
+                     "DyecEuCX5pX2CC1K+hgxhxM+mzRzIRXRQUzsH0zGsV0AnlOzt7QpiNiAis+eYKC4\n" \
+                     "ssUhHQ0vTf0ETC8lKwvLzbzhh2EpBREOMWd2VH+5cSJ9X/islqnNucfbnOFmFmAF\n" \
+                     "fDAf6wku4t7bGfwr1f1d3R2nbpo5htBh9Dtpv2rza6g/l6RcdAp/R2boXRVewU7u\n" \
+                     "A/BefxqP1oK6p+KRcweVAgMBAAGjUzBRMB0GA1UdDgQWBBRwWILbzSzwSI/Vr8pM\n" \
+                     "Osk1+3y80jAfBgNVHSMEGDAWgBRwWILbzSzwSI/Vr8pMOsk1+3y80jAPBgNVHRMB\n" \
+                     "Af8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCLDRZi8Gw3iweHWES6A79I6X1F\n" \
+                     "FLQfArNV54L/XXBLlBsAKl0hTuRkcGosnwKb0w1It9Bx3kIrJxavaXO+IvuR1hFM\n" \
+                     "K+21dG3JKIcgj+Lb9p12udZngQhtXAYUzlfLyz/ouok4JtHioFDdkAvCR4w/IBYJ\n" \
+                     "VBpe41E7Qxv2aD3BNLiBCq9iazpji8KFzcU/m4zXdTiAJ05B5wpeStrHieHkqnyU\n" \
+                     "fyWCEF0/YyMppmm/2KK7gg/y0AhX9osPfOS8ooKDxCyy4VZ2VjS26PP5sojE2OSA\n" \
+                     "AOL4UFLmy7psFPIgqVI6Td+tHfdQUnk4525ffEvq+gkrHW5iMwWh66IjXO8F\n" \
+                     "-----END CERTIFICATE-----"</span><span class="variable">;</span>
+
+                     <span class="type">const char*</span> <span class="variable">ESP_CA_cert =</span><span class="userInput"> \
+                     "-----BEGIN CERTIFICATE-----\n" \
+                     "MIIDkzCCAnsCFEKsZZjyTb+Eax2gtM1lENNiTIV1MA0GCSqGSIb3DQEBCwUAMIGD\n" \
+                     "MQswCQYDVQQGEwJDQTEPMA0GA1UECAwGUXVlYmVjMREwDwYDVQQHDAhNb250cmVh\n" \
+                     "bDERMA8GA1UECgwIQ0FtYXN0ZXIxDTALBgNVBAsMBFRFU1QxEDAOBgNVBAMMB1Nl\n" \
+                     "cnZldXIxHDAaBgkqhkiG9w0BCQEWDWNhQG1hc3Rlci5jb20wHhcNMjMwMjAzMDMz\n" \
+                     "NTQzWhcNMjQwMTI5MDMzNTQzWjCBhzELMAkGA1UEBhMCQ0ExDzANBgNVBAgMBlF1\n" \
+                     "ZWJlYzERMA8GA1UEBwwITW9udHJlYWwxFDASBgNVBAoMC0NsaWVudC1jZXJ0MQ0w\n" \
+                     "CwYDVQQLDAR0ZXN0MQ8wDQYDVQQDDAZDbGllbnQxHjAcBgkqhkiG9w0BCQEWD2Ns\n" \
+                     "aWVudEBjZXJ0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMA6\n" \
+                     "BMIV5rn7Axhj3ciRFeiBrNj47Z8isAZ2oDNEMgfzF0vq3Mm3yMN7lzmQ93lrYqEP\n" \
+                     "3jCqF+dK7O+Bpwj4yruJ2BonTIOZfyFrfJVDmqYwo8autTB1uP647naL7jImySYE\n" \
+                     "Up28bRUu+Z9XA42I0EsCXL9MnPwIsVwoZ1kkX/EvSYzh0SJp2IxoMQNYP+Qox6Di\n" \
+                     "e25/jpX53j8vZZCWzyuwFiAXV7xUZXTVxkmuDmBRIZhOsihEvo6GhojHpxE+J8YZ\n" \
+                     "x9V+h9o6ScbMz3xxPfknUgZv9sk7OKgcg7sAHIQlRaEbRwL+LBws2SIgiwiE0Hh6\n" \
+                     "M3WR8unUvlBKy0qXex8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAIKTIUDDAXQmA\n" \
+                     "mUeGO3IT0N/bWtbRtDzNBIbR6W++J7vF0wdbLINs5ywrKkoC7Q3P4gQO514UtCKH\n" \
+                     "9EuzVYfer0eQYurc8JDfrGKRTomca883TohSGjAlnHGgM0+DT6TNzO8jDezPin+3\n" \
+                     "y7rTtSkSPPm3+TSGfsTM7DgiIl8+RmHmft6M/cnOcaAa2Da9ExAXNW0mKH5Liq41\n" \
+                     "GWkawo8/X27KcHrFoGylmEmoUPVbBhBMkzrfLzYhpYdgm6JETS9DL3iB3FP9oeoP\n" \
+                     "kf37Kwf7r5/0kuCb5fiOVrhB7QuEwy3O3IiADA5eemXELmkIsdSmueZdG4i18yKr\n" \
+                     "3yYWjiDmSQ==\n" \
+                     "-----END CERTIFICATE-----"</span><span class="variable">;</span>
+
+                     <span class="type">const char*</span> <span class="variable">ESP_RSA_key=</span> <span class="userInput">\
+                     "-----BEGIN RSA PRIVATE KEY-----\n" \
+                     "MIIEpQIBAAKCAQEAwDoEwhXmufsDGGPdyJEV6IGs2PjtnyKwBnagM0QyB/MXS+rc\n" \
+                     "ybfIw3uXOZD3eWtioQ/eMKoX50rs74GnCPjKu4nYGidMg5l/IWt8lUOapjCjxq61\n" \
+                     "MHW4/rjudovuMibJJgRSnbxtFS75n1cDjYjQSwJcv0yc/AixXChnWSRf8S9JjOHR\n" \
+                     "ImnYjGgxA1g/5CjHoOJ7bn+OlfnePy9lkJbPK7AWIBdXvFRldNXGSa4OYFEhmE6y\n" \
+                     "KES+joaGiMenET4nxhnH1X6H2jpJxszPfHE9+SdSBm/2yTs4qByDuwAchCVFoRtH\n" \
+                     "Av4sHCzZIiCLCITQeHozdZHy6dS+UErLSpd7HwIDAQABAoIBAQCtVyRXSJyo9TuT\n" \
+                     "UOr8JCkXY2hUuBS/Pe5xxaMs18At/v3xDbdPh5VZAigaVylyqm1kRATe6WNoxN3o\n" \
+                     "FIhlxMQ8XU8sNmf++/nyTxUnHLFmT9JAJedp7Z6GxIj1CbYgL22QBLHjX7kWMygS\n" \
+                     "kcq4ZLlACr9MGnAtrkERk7WuYujJeYMajhwDodH1jIQjaa8eAhGMajfKrPeQR5vR\n" \
+                     "1HeL4z0IKWqJ3x6VgafA4hyt8WMweKuNL+pMTMrJ0/HU+3L2qLa0AiHBpe9aSgFK\n" \
+                     "xReEWT4BxjRZAL/IteBriZB1K0Ly8Tmmc1Tk6ExtlwPiiA/JpI5/0Ti90E7CGI1X\n" \
+                     "OtKhjBvBAoGBAPMqSXsei1wpgk8OwZ8tAHmw2pGzusjv3uy5MvkN2F0zJ2XK6oBO\n" \
+                     "1emsKgW4/97fW6K/vL4AJntcfqGlcea8i00rk/2i2v0QRidbugAEnu7jUZ7HHvvp\n" \
+                     "8flSaQW427ob1UFG3lgQbjRm2FauI7odc8Xfj6vMOUA6UIBBjv0LkLzvAoGBAMpf\n" \
+                     "b68cyUd7CFs6fKS4KENXCH4ZHJf8hPNWJP+DQqW6yWTeDW8fzE/HfA1tnCbZdT+c\n" \
+                     "dLUuJLHes44/jZ1AZrrW/aJUOF6Pc4i9ilctPf7h1ccSsbSUC2A7n7Ri7sy3orDh\n" \
+                     "XkPXQh6d7qVBshvTJRsKB2uoBmrjiSGQYiEsHoTRAoGBAMAzJ3uKbAq/wIDun/pJ\n" \
+                     "3rtRH6HU1wmmF6UyyWh0GhWorjZWSj56kbguXdTCInSuRUcBmJTxl3kgZfMsyzfe\n" \
+                     "xZiMnl/3TnKCX4ESjpUfEeSuhsAikYn6o0k3a02bjQmwoEIFWw9uhT0kIVF6OUEN\n" \
+                     "sImxqGTZelMbBLAroXK/pnq/AoGBAKqIhZqwzUR4/u+xd3tu3C7y1ms8SgYhev97\n" \
+                     "Ji5StAToQ/HF1NhBmW/ZEEZYiW+La+wwsYBD5BQnMHO8Rl+u92KW7KCwC9hTVe5y\n" \
+                     "mnMf4tA4Cmd471rWLkfntorRm53TWTtojoDokgUu3P1RQP+FjA0fBGXJ765/Ev2/\n" \
+                     "p5GAli8hAoGAOsD1GeWCvlKiKqlq1NVRoTAsXf9W3wLCJKTSAIFeRN4GGyOKI5a4\n" \
+                     "hqxyEzllUxuWOLd+pJYvE00100s+x5OEnzuVB2Mz99CHA5reupUX7YMQvRT6Ks0i\n" \
+                     "pZbxQ4R1asAxkb9o1oLKHqeuVNf89yF/dFhSfu0/0AFGHYpipQ9HlQM=\n" \
+                     "-----END RSA PRIVATE KEY-----"</span><span class="variable">;</span>
+                     
+                     <span class="variable">WiFiClientSecure ESP32client;</span>
+                     <span class="variable">PubSubClient</span> <span class="object">client</span> <span class="variable">(ESP32client);</span>
+                     <span class="variable">OneWire</span> <span class="object">oneWire</span> <span class="variable">(oneWireBus);</span>
+                     <span class="variable">DallasTemperature</span> <span class="object">sensors</span> <span class="variable">(&oneWire);</span>
+
+                     <span class="type">void</span> <span class="object">setup</span><span class="variable">() {</span>
+
+                        <span class="object">delay</span><span class="variable">(</span><span class="userInput">100</span><span class="variable">);</span>
+                        <span class="object">Serial.begin</span><span class="variable">(</span><span class="userInput">115200</span><span class="variable">);</span>
+                        <span class="object">analogReadResolution</span><span class="variable">(</span><span class="userInput">10</span><span class="variable">);</span>
+
+                        <span class="object">sensors.begin</span><span class="variable">();</span>
+
+                        <span class="condition">while</span><span class="variable">(!Serial){</span>
+                           <span class="object">Serial.println </span><span class="variable">(</span><span class="userInput">"Ouverture de la connexion serie"</span><span class="variable">);</span>
+                        <span class="variable">}</span>
+                        <span class="annot">
+                        //:::::::::::::::::::::::::::::
+                        //Connexion au WIFI
+                        //:::::::::::::::::::::::::::::
+                        </span>
+                        <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">""</span><span class="variable">);</span>
+                        <span class="object">Serial.print</span><span class="variable">(</span><span class="userInput">"Connexion en cours au Wifi: "</span><span class="variable">);</span>
+                        <span class="object">Serial.println</span><span class="variable">(ssid);</span>
+                        
+                        <span class="object">WiFi<span class="variable"></span>.begin</span><span class="variable">(ssid, password);</span>
+                        <span class="condition">while</span><span class="variable">(</span> <span class="object">WiFi.status</span><span class="variable">() != WL_CONNECTED) {</span>
+                           <span class="object">delay</span><span class="variable">(</span><span class="userInput">500</span><span class="variable">);</span>
+                           <span class="object">Serial.println</span><span class="variable">('.');
+                        }</span>
+
+                        <span class="object">Serial.print</span><span class="variable">(</span><span class="userInput">"Connection au WIFI etablie a l'IP: "</span><span class="variable">);</span>
+                        <span class="object">Serial.println</span><span class="variable">(</span><span class="object">WiFi.localIP</span><span class="variable">());</span>
+
+                        <span class="object">ESP32client.setCACert</span><span class="variable">(CA_cert); </span> 
+                        <span class="object">ESP32client.setCertificate</span><span class="variable">(ESP_CA_cert);</span>
+                        <span class="object">ESP32client.setPrivateKey</span><span class="variable">(ESP_RSA_key);</span>
+
+                        <span class="annot">
+                        //:::::::::::::::::::::::::::::
+                        //Configuration de la connection MQTT
+                        //:::::::::::::::::::::::::::::</span>
+                        <span class="object">client.setServer</span><span class="variable">(mqqtServer,</span><span class="userInput"> 8883</span><span class="variable">);</span>
+                        <span class="annot">
+                        //:::::::::::::::::::::::::::::
+                        //Initialisation de l'heure
+                        //:::::::::::::::::::::::::::::</span>
+                        <span class="object">configTime</span><span class="variable">(gmtOffset_sec, daylightOffset_sec, ntpServer);
+                     }</span>
+
+                     <span class="type">void</span> <span class="object">loop</span><span class="variable">() {</span>
+
+                        <span class="condition">while</span><span class="variable">(!</span><span class="object">client.connected</span><span class="variable">()){</span>
+                           <span class="object">reconnect</span><span class="variable">();
+                        }</span>
+                    
+                        <span class="type">time_t</span>  <span class="variable">now =</span> <span class="object">time</span> <span class="variable">(</span><span class="userInput">NULL</span><span class="variable">);</span>
+                        <span class="type">struct</span>  <span class="userInput">tm</span>  <span class="object">timeinfo</span><span class="variable">;</span>
+                        
+                        <span class="condition">if</span><span class="variable">(!</span> <span class="object">getLocalTime</span><span class="variable">(&timeinfo)){</span>
+                           <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">"Failed to obtain time"</span><span class="variable">);</span>
+                           <span class="condition">return</span><span class="variable">;
+                        }</span>
+
+                        <span class="condition">for</span> <span class="variable">(</span><span class="type">int</span> <span class="variable">j=</span> <span class="userInput">0</span>; <span class="variable">j&lt;sampleSize; j++)
+                        { </span>
+                           <span class="type">long</span>  <span class="variable">reading_x =</span> <span class="userInput">0</span><span class="variable">;</span>
+                           <span class="condition">for</span>  <span class="variable">(</span> <span class="type">int</span> <span class="variable">i =</span> <span class="userInput">0</span><span class="variable">; i &lt; interpolation; i++)
+                          {
+                          reading_x +=</span> <span class="object">analogRead</span><span class="variable">(xpin);
+                          }</span>
+                          <span class="type">int</span> <span class="variable">X= (reading_x/interpolation);</span>
+                    
+                          <span class="condition">if</span> <span class="variable">(X > maximumX){
+                            maximumX = X;
+                          }</span>
+                          <span class="condition">if</span>  <span class="variable">(X &lt; minimumX){
+                            minimumX = X;
+                          }
+                                          
+                        }
+                           amplitude = maximumX - minimumX;</span> 
+                           <span class="annot">
+                        //Delai entre les envois</span>
+                        <span class="type">long</span> <span class="variable">currentNow =</span> <span class="object">millis</span><span class="variable">();</span>
+                        <span class="condition">if</span><span class="variable">(currentNow - lastmsg > timeBetween) {
+                              lastmsg = currentNow;</span>
+                     
+                              <span class="annot">//donnees temperatures</span>
+                              <span class="object">sensors.requestTemperatures</span><span class="variable">()</span>; 
+                              <span class="type">float</span> <span class="variable">temperatureC =</span> <span class="object">sensors.getTempCByIndex</span><span class="variable">(</span><span class="userInput">0</span><span class="variable">);</span>
+                              
+                              <span class="annot">//donnees temps
+                              <span class="type">struct</span> <span class="variable">tm</span> <span class="type">*</span><span class="object">current_time</span> <span class="variable">=</span> <span class="object">localtime</span><span class="variable">(&now);</span>
+                     
+                              <span class="annot">//Construction, impression et publication du JSON</span>
+                              <span class="type">char</span> <span class="object">m</span><span class="variable">[</span><span class="userInput">50</span><span class="variable">];</span>
+                              <span class="object">strftime</span><span class="variable">(m,</span> <span class="userInput">50</span><span class="variable">,</span> <span class="userInput">"%c"</span><span class="variable">, current_time);</span>
+                              <span class="object">jSonDoc</span><span class="variable">[</span><span class="userInput">"date"</span><span class="variable">]= m;</span>
+                              <span class="object">jSonDoc</span><span class="variable">[</span><span class="userInput">"id motor"</span><span class="variable">]= motor_number;</span>
+                              <span class="object">jSonDoc</span><span class="variable">[</span><span class="userInput">"temperature"</span><span class="variable"></span><span class="variable">]= temperatureC;</span>
+                              <span class="object">jSonDoc</span><span class="variable">[</span><span class="userInput">"amplitude"</span><span class="variable">]= amplitude;</span>
+                     
+                              <span class="object">serializeJson</span> <span class="variable">(jSonDoc, output);</span>
+                              <span class="object">Serial.println</span> <span class="variable">(output);</span>
+                              <span class="object">client.publish</span> <span class="variable">(</span> <span class="userInput">"montreal/moteur01/datas"</span> <span class="variable">,output);
+                        }
+                     }</span>
+
+                     <span class="type">void</span> <span class="object">reconnect</span><span class="variable">() {</span>
+                        <span class="condition">while</span><span class="variable">(!</span><span class="object">client.connected</span><span class="variable">()) {</span>
+                           <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">"liaison MQTT non etablie...essai en cours"</span><span class="variable">);</span>
+                            
+                           <span class="annot">//client ID</span>
+                           <span class="variable">String clientId =</span> <span class="userInput">"client ESP32"</span><span class="variable">;</span>
+                           <span class="variable">clientId +=</span> <span class="object">String</span><span class="variable">(</span><span class="object">random</span><span class="variable">(0x</span><span class="userInput">ffff</span><span class="variable">), HEX);</span>
+                    
+                           <span class="annot">//Essai de connection</span>
+                           <span class="condition">if</span><span class="variable">(</span><span class="object">client.connect</span><span class="variable">(</span><span class="object">clientId.c_str</span><span class="variable">())) {</span>
+                              <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">"Liaison MQTT etablie"</span><span class="variable">);</span>
+                              <span class="variable">}</span> <span class="condition">else</span> <span class="variable">{</span>
+                                 <span class="object">Serial.println</span><span class="variable">(</span><span class="userInput">"Pas de connexion"</span><span class="variable">);</span>
+                                 <span class="object">Serial.println</span><span class="variable">(</span><span class="object">client.state</span><span class="variable">());</span>
+                                 <span class="object">delay</span><span class="variable">(</span><span class="userInput">5000</span><span class="variable">);
+                            }
+                        }
+                    }</span>
+                       
+                  </code>
+            </pre>
+         </div>
+
+         <div class="presentation">
+            <figure>
+               <img src="./resources/images/digital_transformation/output_sensors_serialMonitor.jpg">
+               <figcaption class="captation">The output of the serial monitor</figcaption>
+            </figure>
+         </div>
+
+         <div class="presentation">
+            <figure>
+               <img src="./resources/images/digital_transformation/TLS.jpg">
+               <figcaption class="captation">The transimission is encrypted as shown on Wireshark</figcaption>
+            </figure>
+         </div>
+
+      </article>
+      
+      <footer>
+         <div class="copyright">
+            <p>© 2023 Emmanuel Moulun, All Rights Reserved</p></br>
+            <p>V0.1</p>
+         </div>
+      </footer>
+   </body>
+</html>

@@ -48,21 +48,44 @@
                   <p>Github</p>
                </a>
          </div>
-         <div class="presentation">
-            <img src="./resources/images/readGeo/readGeo_renamer_node.PNG">
+
+         <div id="code">
+            <pre>
+               <code id="tmp">
+                  #This code allow the nuke user to rename all the geometry imported from a 3D software
+                  #with the same name used in the 3D package it comes from
+
+                  import nuke
+                  import re
+
+                  for node in nuke.allNodes("ReadGeo2"):
+                     
+                     #search pattern definition
+                     regex = re.compile(r"\/(\w+)")
+                     
+                     #geometry path extraction, return a list with one string path
+                     abc_path = node['scene_view'].getSelectedItems()
+                     
+                     #list creation regex
+                     obj_name = re.findall(regex, abc_path[0])
+                     
+                     #set readgeo label knob with original name used in the 3d software
+                     node["label"].setValue(obj_name[1])
+               </code>
+            </pre>
          </div>
  
          
          <div class="vignette">
             <img src="./resources/images/readGeo/code.PNG">
-            <img src="./resources/images/readGeo/code.PNG">
+            <img src="./resources/images/readGeo/readGeo_renamer_node.PNG">
          </div>
       </article>
       
       <footer>
          <div class="copyright">
                <p>© 2023 Emmanuel Moulun, All Rights Reserved</p>
-               <p>V0.0</p>
+               <p>V0.1</p>
          </div>
       </footer>
    </body>

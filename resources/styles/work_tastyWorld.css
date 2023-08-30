@@ -153,10 +153,15 @@ header {
 .containerVideo {
        display: flex;
        flex-wrap: wrap;
+       /* align-items: center; */
+
        position: relative;
        top: 7.25rem;
        width: 70%;
        margin: auto;
+
+       /* border: 5px solid rgb(255, 0, 128); */
+
 }
 
 .boldItalic {
@@ -168,12 +173,16 @@ header {
        justify-content: space-between;
        width: 100%;
        margin-bottom: 2rem;
+       /* background-color: rgb(255, 63, 63); */
        border-radius: 0.5rem;
+       /* border: 5px solid blue; */
 }
 
 .typeOfWork {
        box-sizing: border-box;
        max-width: 40%;
+
+       font-family: 'Roboto Condensed';
        letter-spacing: 0.1px;
        text-transform: uppercase;
        font-size: 2rem;
@@ -185,6 +194,7 @@ header {
        padding: 1rem 2rem;
        color: white;
        background-color: #363636;
+
 }
 
 .workExplanation {
@@ -193,6 +203,7 @@ header {
        font-size: 1.2rem;
        margin: 2rem 0;
        text-align: justify;
+       /* border: 5px solid rgb(255, 174, 0); */
 }
 
 #buttonGit {
@@ -227,6 +238,8 @@ header {
 .vignette {
        display: flex;
        width: 100%;
+       
+       /* border: 1px solid white; */
 }
 
 .vignette img {

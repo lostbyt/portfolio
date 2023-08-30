@@ -415,12 +415,12 @@ header {
        align-items: center;
 
        transition-property: opacity;
-       transition-duration: 500ms;
+       transition-duration: 350ms;
        transition-timing-function: ease-in-out;
 
        display:flex;
        text-align: center;
-       background-color: rgb(255, 63, 63);
+       background-color: #23D0E8;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
