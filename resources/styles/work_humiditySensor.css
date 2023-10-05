@@ -10,7 +10,7 @@ html, body {
 header {
        position: fixed;
        width: 100%;
-       background-color: #23D0E8;
+       background-color: #383f52;
        z-index: 10;
 }
 
@@ -183,8 +183,8 @@ header {
        align-self: center;
        margin: 0 2rem 0 0;
        padding: 1rem 2rem;
-       color: white;
-       background-color: #363636;
+       color: rgb(0, 0, 0);
+       background-color: #33FFE0;
        /* border: 5px solid rgb(0, 183, 255); */
 
 }
@@ -209,7 +209,7 @@ header {
        justify-self: flex-end;
        margin: 2rem 0 2rem 2rem;
        border-radius: 2rem;
-       background-color: #23D0E8;
+       background-color: #383f52;
        color: white;
        font-weight: 400;
        transition-property: background-color, color;

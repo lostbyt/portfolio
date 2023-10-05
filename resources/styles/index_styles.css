@@ -17,7 +17,7 @@ html, body {
 header {
        position: fixed;
        width: 100%;
-       background-color: #23D0E8;
+       background-color: #383f52;
        z-index: 5;
 }
 
@@ -161,7 +161,7 @@ header {
        border-radius: 1.5rem;
        text-align: center;
        color: white;
-       background-color: #23D0E8;
+       background-color: #383f52;
 
        transition-property: background-color, color;
        transition-duration: 200ms;

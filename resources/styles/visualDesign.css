@@ -13,7 +13,7 @@ html, body {
 header {
        position: fixed;
        width: 100%;
-       background-color: #23D0E8;
+       background-color: #383f52;
        z-index: 10;
 }
 
@@ -121,9 +121,9 @@ header {
        top: 7.25rem;
        max-width: 70%;
        margin: auto;
-       color: white;
+       color: rgb(0, 0, 0);
        padding: 0.5rem 1rem;
-       background-color: #363636;
+       background-color: #33FFE0;
 }
 
 #container_visualDesign {
@@ -185,7 +185,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -233,7 +233,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -274,7 +274,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -320,7 +320,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -365,7 +365,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;

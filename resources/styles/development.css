@@ -13,7 +13,7 @@ html, body {
 header {
        position: fixed;
        width: 100%;
-       background-color: #23D0E8;
+       background-color: #383f52;
        z-index: 10;
 }
 
@@ -121,9 +121,9 @@ header {
        top: 7.25rem;
        width: 70%;
        margin: auto;
-       color: white;
+       color: rgb(0, 0, 0);
        padding: 0.5rem 1rem;
-       background-color: #363636;
+       background-color: #33FFE0;
 }
 
 #container_visualDesign {
@@ -188,7 +188,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        border-radius: 0.5rem;
        z-index: 1;
 }
@@ -233,7 +233,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -275,7 +275,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -295,7 +295,7 @@ header {
  #gridTemplateImage04 {
        grid-area:  gridTemplateImage04;
        overflow: hidden;
-       background-color: rgb(10, 133, 204);
+       background-color: #383f52;
        border-radius: 0.5rem;
        z-index: 0;
  }
@@ -322,7 +322,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -344,7 +344,7 @@ header {
 #gridTemplateImage05 {
        grid-area:  gridTemplateImage05;
        overflow: hidden;
-       background-color: rgb(10, 204, 123);
+       background-color: #383f52;
        border-radius: 0.5rem;
        z-index: 0;
 }
@@ -371,7 +371,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
@@ -420,7 +420,7 @@ header {
 
        display:flex;
        text-align: center;
-       background-color: #23D0E8;
+       background-color: #383f52;
        /* opacity: 0.95; */
        border-radius: 0.5rem;
        z-index: 1;
